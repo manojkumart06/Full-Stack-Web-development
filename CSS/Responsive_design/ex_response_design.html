@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Layout Example</title>
+<style>
+  .container {
+    display: flex;
+    
+  }
+  .box {
+    width: 32%;
+    height: 300px;
+    margin: 0 0.4%;
+  }
+  #box1 {
+    background-color: #ff8989;
+  }
+  #box2 {
+    background-color: #88f7ce;
+  }
+  #box3 {
+    background-color: #e29df2;
+  }
+  @media (max-width: 600px) {
+    .container {
+      flex-wrap: wrap;
+    }
+    .box {
+      width: 100%;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+  </div>
+</body>
+</html>
+
+<!--In this version, I've added a media query that triggers
+     when the browser width is 600px or less. Inside the media query, 
+     I've adjusted the .container to have flex-wrap: wrap;, 
+     which causes the boxes to stack vertically on smaller screens.
+      I've also set the width of the .box elements to 100% to ensure 
+    they take up the full width of their container on smaller screens-->
